@@ -1,0 +1,24 @@
+{
+    "imposters": [
+        {
+            "port": 443,
+            "protocol": "https",
+            "name": "Service 1 HTTPS Mocking",
+            "stubs": [
+                <% include service1/imposters.ejs %>,
+                <% include Defaults/imposters.ejs %>
+            ],
+            "key": "-----BEGIN PRIVATE KEY-----\nMIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAMuwtPgUU6esbIE+\np+VMCmqF3uPhZin9QIORca3aznRxAgMoByG+0FcKI8K3M0KlWDRcSemxWfHoYHef\nejAmu5yQ+EFbun/cV8PVOPCK2hOXOMM8j91xGX1bTfTwrAMsR5xYIAUJCzMwOw74\nQc8UOsicJBr4MabfkWwzMeuwvJoXAgMBAAECgYAET5IU6gE3PDvzpErTXH+f74Nf\nGUcbPmPeJPbd8hKKflXHkVJNUYeBQBKvrUblczBhs05RJtK7fuqDvZlNaZRw2ydI\ncvztDeu9ncR0nNTvJVdFF7bQZwFg+u/0El0TSuoHxaLKc4w7Dza1h5PEE8XTvTbu\nVCnH2GYovM79bSG3+QJBAO+qC+qyZpQ3hONTLFD0A8qtllNqOKaXbvGU79vCzPCK\nk9Vyc3gs2BdX+h8zuIQR6V1oPmu82yM05wa0XQgLcOUCQQDZkvFI6RU/26u/fxMr\nZrY7NaOXxLjxTu7LAQA5bcwbYP1/b7ih6GUqpgkqw/RRbFSf4QtpjVebgcdBlPRV\nyvtLAkBvvbzopF0nZetTggf7honuCZk5MyFOqvRTNrnOoLikvjfHISGtOltWJvK7\ncYXqLd+8aUoROXCCrbu5aIanpY3xAkBOkxa4chTOfxLDkazmm61sLK7r/Iud+heb\nEL14AAMaUCi8gSh4sGj4wgXFgAcX8LuPEcMBV54v9upy8Mxcv3WJAkEA1eJ+rZJL\n9nTPUvqlYuENwopau4cBLn+qpMimfV0Of7K6mlzDET+EGq7P2o72vuhOqLBXhHoR\nqmxTxJn/b+3Nxg==\n-----END PRIVATE KEY-----",
+            "cert": "-----BEGIN CERTIFICATE-----\nMIIClzCCAgCgAwIBAgIJAIqTrGRUcN50MA0GCSqGSIb3DQEBCwUAMGMxCzAJBgNV\nBAYTAkdCMQ8wDQYDVQQHDAZMb25kb24xDzANBgNVBAoMBlBhZGRsZTEUMBIGA1UE\nCwwLRW5naW5lZXJpbmcxHDAaBgNVBAMME3NlcnZpY2UxLnBhZGRsZS5jb20wHhcN\nMTgwNTE2MTA0OTEyWhcNMTkwNTE2MTA0OTEyWjBjMQswCQYDVQQGEwJHQjEPMA0G\nA1UEBwwGTG9uZG9uMQ8wDQYDVQQKDAZQYWRkbGUxFDASBgNVBAsMC0VuZ2luZWVy\naW5nMRwwGgYDVQQDDBNzZXJ2aWNlMS5wYWRkbGUuY29tMIGfMA0GCSqGSIb3DQEB\nAQUAA4GNADCBiQKBgQDLsLT4FFOnrGyBPqflTApqhd7j4WYp/UCDkXGt2s50cQID\nKAchvtBXCiPCtzNCpVg0XEnpsVnx6GB3n3owJruckPhBW7p/3FfD1TjwitoTlzjD\nPI/dcRl9W0308KwDLEecWCAFCQszMDsO+EHPFDrInCQa+DGm35FsMzHrsLyaFwID\nAQABo1MwUTAdBgNVHQ4EFgQUjDtsza0FKk4n8m6cR8hk2AEoa7wwHwYDVR0jBBgw\nFoAUjDtsza0FKk4n8m6cR8hk2AEoa7wwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG\n9w0BAQsFAAOBgQALtvl+VgdsCIneZkaV+TtTO0RqIK0l/yPhJq6dGgde0OCqLC+f\nSrNxKLVbk0oj68diqr/biFOjHOHH5GlcVXac9wYS0RJxLYiBFZhjcVR06UAEV8qF\nrnqs8WA4AHMwwBJL66EwBt8Q6bZgNqSag64KVxYnvUr8IwuI/KHsCcjZyQ==\n-----END CERTIFICATE-----"
+        },
+        {
+            "port": 8080,
+            "protocol": "http",
+            "name": "Service 2 HTTP Mocking",
+            "stubs": [
+                <% include service2/imposters.ejs %>,
+                <% include Defaults/imposters.ejs %>
+            ]
+        }
+    ]
+}

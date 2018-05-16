@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    image: paddle-examples/mocks-nginx
+    ports:
+        - 8888:80
+    links:
+      - php
+
+  php:
+    image: paddle-examples/mocks-php
+    volumes:
+      - ./src:/var/www/html

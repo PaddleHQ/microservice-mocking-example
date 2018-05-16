@@ -1,0 +1,13 @@
+{
+    "responses": [{"inject": "<%- stringify(filename, 'service1/successResponse.js') %>"}],
+    "predicates": [{
+        "and": [
+            {
+                "equals": {
+                    "path": "/test",
+                    "method": "GET"
+                }
+            }
+        ]
+    }]
+}

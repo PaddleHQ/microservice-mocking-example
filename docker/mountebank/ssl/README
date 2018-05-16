@@ -1,0 +1,5 @@
+If you update any certificates/keys here, please update the imposters.ejs file to as they are set there too.
+
+To generate a new cert run
+
+openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout paddle_cert.key -out paddle_cert.crt -subj "/C=GB/L=London/O=Paddle/OU=Engineering/CN=service1.paddle.com"

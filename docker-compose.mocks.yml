@@ -1,0 +1,14 @@
+# Overrides for mocking only
+version: '3'
+services:
+  php:
+    volumes:
+      - ./docker/mountebank/ssl:/tmp/ssl
+    links:
+      - mountebank:service1.paddle.com
+      - mountebank:service2.paddle.com
+
+  mountebank:
+    image: paddle-examples/mocks-mountebank
+    volumes:
+      - ./docker/mountebank/resources/imposters:/mb/
